@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2024 Michael Federczuk
+  Copyright (c) 2025 Michael Federczuk
   SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
@@ -13,14 +13,14 @@ This is a simple RPM package that supplies the [Ubuntu font family].
 
 ## Download ##
 
-A pre-built binary RPM file for Fedora 39 can be downloaded from the [GitHub releases].
+Pre-built binary RPM files for Fedora 39 and 41 can be downloaded from the [GitHub releases].
 
 ```sh
-dnf install 'https://github.com/mfederczuk/ubuntu-font-family-rpm/releases/download/0.83-1/ubuntu-fonts-0.83-1.fc39.noarch.rpm'
+dnf install "https://github.com/mfederczuk/ubuntu-font-family-rpm/releases/download/0.83-1/ubuntu-fonts-0.83-1.fc$(rpm -E %fedora).noarch.rpm"
 ```
 
-For other other versions of Fedora or other RPM-based Linux distrobutions, the RPM file should be built manually,
-though because this is such a simple package, the pre-built file *should* work on any system.
+For other versions of Fedora or other RPM-based Linux distributions, the RPM file should be built manually,
+though because this is such a simple package, the existing pre-built files *should* work on any system.
 
 [GitHub releases]: <https://github.com/mfederczuk/ubuntu-font-family-rpm/releases/tag/0.83-1>
 
